@@ -1,4 +1,4 @@
-import { Geist, Geist_Mono, Inter, Plus_Jakarta_Sans } from "next/font/google";
+import { Inter, Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 
 const inter = Inter({
@@ -20,7 +20,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${inter.variable} ${jakarta_sans.variable}  antialiased`}
+        className={`${inter.variable} ${jakarta_sans.variable} font-inter antialiased`}
       >
         {children}
       </body>
