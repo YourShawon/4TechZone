@@ -6,7 +6,7 @@ import ContactForm from "@/components/contact-form";
 const ContactPage = () => {
   return (
     <div>
-      <div className="h-80 flex items-center justify-center flex-col gap-2 bg-gradient-to-b from-[#cfe2ff] via-[#f8f9fa] to-[#fff] pb-8">
+      <div className="h-40 md:h-60 lg:h-80 flex items-center justify-center flex-col gap-2 bg-gradient-to-b from-[#cfe2ff] via-[#f8f9fa] to-[#fff] pb-8">
         <h2 className="font-jakarta-sans text-4xl text-[#0d6efd] drop-shadow-md">
           Contact Us
         </h2>
