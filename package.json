@@ -10,6 +10,8 @@
   },
   "dependencies": {
     "4techzone": "link:",
+    "@headlessui/react": "^2.2.3",
+    "@heroicons/react": "^2.2.0",
     "@hookform/resolvers": "^5.0.1",
     "@radix-ui/react-accordion": "^1.2.10",
     "@radix-ui/react-checkbox": "^1.3.1",
