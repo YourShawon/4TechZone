@@ -93,3 +93,27 @@
     @apply bg-background text-foreground;
   }
 }
+
+.items-design{
+  border: 1px solid #cccccc;
+  border-radius: 12px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.08);
+  transition: all  .4s ease-in-out;
+}
+.items-design:hover{
+  border: 1px solid transparent;
+  border-radius: 12px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.08);
+}
+.borderpart{
+  border: 2px solid #000;
+  border-radius: 12px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.08);
+  transition: all  .4s ease-in-out;
+  cursor: pointer;
+}
+.borderpart:hover{
+  border: 2px solid #187ced;
+  color: #fff;
+  background:#187ced ;
+}
