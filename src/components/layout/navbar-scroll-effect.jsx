@@ -2,7 +2,7 @@
 
 import useVerticalWindowScroll from "@/hooks/useVerticalWindowScroll";
 import React, { useEffect } from "react";
-import { cn } from "@/lib/utils";
+import { motion } from "framer-motion";
 
 const NavbarScrollEffect = ({ children }) => {
   const [scrolledOnTop, setScrolledOnTop] = React.useState(true);
@@ -17,16 +17,29 @@ const NavbarScrollEffect = ({ children }) => {
   }, [scrollY]);
 
   return (
-    <div
-      className={cn(
-        "fixed w-full z-[1000]",
-        scrolledOnTop
-          ? "bg-transparent transition-colors duration-400 ease-in-out"
-          : "bg-dark-1 transition-colors duration-400 ease-in-out shadow-[0px_5px_5px_-5px_rgba(200,_200,_200,_0.5),_0_5px_10px_-5px_rgba(180,_180,_180,_0.5)]"
-      )}
+    <motion.div
+      className="fixed w-full z-[1000]"
+      initial={{ y: -100, opacity: 0 }}
+      animate={{
+        y: 0,
+        opacity: 1,
+        backgroundColor: scrolledOnTop
+          ? "rgba(255, 255, 255, 0)"
+          : "rgba(255, 255, 255, 0.95)",
+      }}
+      transition={{
+        duration: 0.6,
+        ease: "easeOut",
+      }}
+      style={{
+        backdropFilter: scrolledOnTop ? "none" : "blur(10px)",
+        boxShadow: scrolledOnTop
+          ? "none"
+          : "0px 5px 15px -5px rgba(0, 0, 0, 0.1), 0 5px 10px -5px rgba(0, 0, 0, 0.05)",
+      }}
     >
       {children}
-    </div>
+    </motion.div>
   );
 };
 
